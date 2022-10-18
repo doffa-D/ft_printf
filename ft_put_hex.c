@@ -6,22 +6,22 @@
 /*   By: hdagdagu <hdagdagu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 19:14:20 by hdagdagu          #+#    #+#             */
-/*   Updated: 2022/10/18 15:04:51 by hdagdagu         ###   ########.fr       */
+/*   Updated: 2022/10/18 16:48:01 by hdagdagu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_hex_len(unsigned int hex)
+int	ft_hex_len(unsigned int hex)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	if(hex == 0)
-		return 0;
+	if (hex == 0)
+		return (0);
 	else
 	{
-		while(hex != 0)
+		while (hex != 0)
 		{
 			i++;
 			hex = hex / 16;
@@ -29,26 +29,27 @@ int ft_hex_len(unsigned int hex)
 		return (i);
 	}
 }
-int ft_put_hex(unsigned int hex,char d)
+
+int	ft_put_hex(unsigned int hex, char d)
 {
-	if(hex == 0)
-		return (write(1,"0",1));
-	if(hex >= 16)
+	if (hex == 0)
+		return (write(1, "0", 1));
+	if (hex >= 16)
 	{
-		ft_put_hex(hex / 16 ,d);
+		ft_put_hex(hex / 16, d);
 		ft_put_hex(hex % 16, d);
 	}
 	else
 	{
-		if(hex <= 9)
+		if (hex <= 9)
 		{
 			ft_putchar(hex + 48);
 		}
 		else
 		{
-			if(d == 'x')
+			if (d == 'x')
 				ft_putchar(hex - 10 + 'a');
-			else if(d == 'X')
+			else if (d == 'X')
 				ft_putchar(hex - 10 + 'A');
 		}
 	}

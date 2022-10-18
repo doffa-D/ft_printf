@@ -6,7 +6,7 @@
 /*   By: hdagdagu <hdagdagu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 13:25:11 by hdagdagu          #+#    #+#             */
-/*   Updated: 2022/10/17 22:14:52 by hdagdagu         ###   ########.fr       */
+/*   Updated: 2022/10/18 17:09:00 by hdagdagu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,11 @@
 # include <stdarg.h>
 
 int		ft_printf(const char *src, ...);
-int 	ft_put_hex(unsigned int hex,char d);
-int     ft_unsi_putnbr(unsigned int n);
-int     ft_put_addp(unsigned long hex,char d);
-
-
-int 	ft_putchar(int c);
-int    ft_putnbr(int n);
-int    ft_putstr(char *s);
-
-
+int		ft_put_hex(unsigned int hex, char d);
+int		ft_unsi_putnbr(unsigned int n);
+int		ft_put_addp(unsigned long hex, char d);
+int		ft_putchar(int c);
+int		ft_putnbr(int n);
+int		ft_putstr(char *s);
 
 #endif
