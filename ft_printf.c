@@ -6,7 +6,7 @@
 /*   By: hdagdagu <hdagdagu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:11:59 by hdagdagu          #+#    #+#             */
-/*   Updated: 2022/10/18 16:44:42 by hdagdagu         ###   ########.fr       */
+/*   Updated: 2022/10/19 20:13:58 by hdagdagu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,10 @@ int	ft_ptr(const char src, va_list ptr)
 	else if (src == 'u')
 		return (ft_unsi_putnbr(va_arg(ptr, unsigned int)));
 	else if (src == '%')
-		ft_putchar('%');
-	return (1);
+		return (ft_putchar('%'));
+	else
+		return (ft_putchar(src));
+	return (0);
 }
 
 int	ft_printf(const char *src, ...)
