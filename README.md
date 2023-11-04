@@ -1,5 +1,8 @@
 # ft_printf
 
+The printf function is one of the most versatile and well-known functions in the C language.From a testing aid to tabulation method, printf is a very powerful and important tool in everydev's kit. This project aims to recreate the behaviour of the original MacOS's printf, includingits basic error management, some of its flags, minimum field width stipulation and most of itsbasic conversions.
+
+
 # Ft_Printf Results
 [![hdagdagu's 42 ft_printf Score](https://badge42.vercel.app/api/v2/cl8ltkjyz00160gjuq0wtbcru/project/2838888)](https://github.com/JaeSeoKim/badge42)
 
